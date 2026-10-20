@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité — PokeBook</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1d1d1f;
+            --text-secondary: #6e6e73;
+            --border: #d2d2d7;
+            --link: #0066cc;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #000000;
+                --text: #f5f5f7;
+                --text-secondary: #86868b;
+                --border: #333336;
+                --link: #2997ff;
+            }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.2rem;
+            letter-spacing: -0.02em;
+        }
+        .date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.3rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="back-link" href="index.html">&larr; Retour à l'accueil</a>
+
+        <h1>Politique de Confidentialité</h1>
+        <div class="date">Dernière mise à jour : 20 octobre 2026</div>
+
+        <p>La présente politique de confidentialité décrit comment l'application <strong>PokeBook</strong> (« l'Application ») collecte, utilise et protège vos informations lorsque vous utilisez notre service sur iOS.</p>
+
+        <p>Nous attachons une importance primordiale au respect de votre vie privée. PokeBook est conçue selon le principe de minimisation des données (Privacy by Design) : nous ne collectons que ce qui est strictement nécessaire au fonctionnement de l'Application.</p>
+
+        <h2>1. Responsable du traitement</h2>
+        <p>Le responsable du traitement des données est l'éditeur de l'application PokeBook. Pour toute question ou demande concernant vos données personnelles, vous pouvez nous contacter directement par email à : <a href="mailto:support@pokebook.fr">support@pokebook.fr</a>.</p>
+
+        <h2>2. Données collectées et autorisations requises</h2>
+        <p>L'Application demande certaines autorisations iOS uniquement pour fournir ses fonctionnalités essentielles :</p>
+        <ul>
+            <li><strong>Appareil photo (Caméra) :</strong> Utilisé en temps réel pour scanner et reconnaître vos cartes à collectionner Pokémon. Le flux vidéo est traité directement sur votre appareil. PokeBook n'enregistre aucune vidéo ni visage.</li>
+            <li><strong>Photothèque (Galerie de photos) :</strong> Si vous choisissez d'importer une photo de carte depuis votre galerie, celle-ci est analysée ponctuellement afin d'en identifier la carte. Aucune autre photo de votre photothèque n'est consultée ou transférée.</li>
+            <li><strong>Capteurs de mouvement (Accéléromètre / Gyroscope) :</strong> Utilisés exclusivement en local pour simuler les effets holographiques et de brillance sur les cartes en fonction de l'inclinaison de votre iPhone. Ces données de mouvement sont éphémères et ne sont jamais stockées ni transmises.</li>
+            <li><strong>Données de collection :</strong> Les cartes que vous ajoutez, vos classeurs virtuels et vos listes de souhaits sont stockés localement sur votre appareil (avec synchronisation sécurisée éventuelle via iCloud ou votre stockage personnel).</li>
+            <li><strong>Données d'achats et d'abonnement :</strong> Toutes les transactions financières sont traitées de manière exclusive et sécurisée par Apple via StoreKit / l'App Store. PokeBook n'a jamais accès à vos coordonnées bancaires, numéros de carte de paiement ou identifiants Apple.</li>
+        </ul>
+
+        <h2>3. Utilisation des données</h2>
+        <p>Les données collectées sont utilisées exclusivement pour :</p>
+        <ul>
+            <li>Identifier les cartes scannées via nos modèles de reconnaissance visuelle.</li>
+            <li>Afficher les informations détaillées de la carte (extensions, rareté, numérotation).</li>
+            <li>Interroger les cotes de marché indicatives (Cardmarket, TCGdex) pour estimer la valeur de votre collection.</li>
+            <li>Gérer l'accès aux fonctionnalités de l'Application (formule gratuite ou abonnement).</li>
+        </ul>
+
+        <h2>4. Partage et transfert de données avec des tiers</h2>
+        <p><strong>Nous ne vendons, ne louons et ne transmettons aucune donnée personnelle à des courtiers de données ou à des régies publicitaires tierces.</strong></p>
+        <p>Pour assurer le fonctionnement technique du service, certaines données strictement anonymisées peuvent transiter par des prestataires techniques :</p>
+        <ul>
+            <li><strong>Apple Inc. :</strong> Pour le traitement sécurisé des paiements et la validation des abonnements In-App via l'App Store.</li>
+            <li><strong>Fournisseurs d'infrastructure d'hébergement :</strong> Pour acheminer les requêtes de consultation de cotes et d'identification de cartes de manière chiffrée (HTTPS / TLS).</li>
+        </ul>
+
+        <h2>5. Durée de conservation des données</h2>
+        <p>Vos données de collection et classeurs sont conservés localement sur votre iPhone tant que vous conservez l'Application. La désinstallation de l'Application entraîne la suppression des données stockées localement.</p>
+
+        <h2>6. Vos droits (RGPD et lois sur la protection des données)</h2>
+        <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et aux réglementations applicables, vous disposez des droits suivants :</p>
+        <ul>
+            <li><strong>Droit d'accès et d'information :</strong> Vous avez le droit d'obtenir confirmation du traitement de vos données.</li>
+            <li><strong>Droit de rectification :</strong> Vous pouvez modifier vos informations directement dans l'Application.</li>
+            <li><strong>Droit à l'effacement :</strong> Vous pouvez supprimer toutes vos données locales en réinitialisant l'Application ou en la supprimant de votre appareil. Pour toute donnée associée à un compte ou au support, vous pouvez nous écrire à <a href="mailto:support@pokebook.fr">support@pokebook.fr</a> pour en demander la suppression immédiate.</li>
+            <li><strong>Droit de révoquer vos consentements :</strong> Vous pouvez activer ou désactiver les accès à la caméra et aux photos à tout moment depuis les <em>Réglages iOS &gt; PokeBook</em>.</li>
+        </ul>
+
+        <h2>7. Protection des mineurs</h2>
+        <p>L'Application ne s'adresse pas aux enfants de moins de 13 ans (ou l'âge légal applicable selon votre juridiction) sans le consentement préalable de leurs représentants légaux. Nous ne collectons sciemment aucune donnée personnelle auprès d'enfants.</p>
+
+        <h2>8. Modifications de la politique de confidentialité</h2>
+        <p>Nous pouvons mettre à jour cette politique de confidentialité pour refléter l'évolution de l'Application ou des obligations légales. La date de dernière mise à jour en tête de ce document sera modifiée en conséquence.</p>
+
+        <h2>9. Contact</h2>
+        <p>Pour toute question relative à cette politique de confidentialité ou à la gestion de vos données, vous pouvez nous contacter :</p>
+        <p><strong>Email :</strong> <a href="mailto:support@pokebook.fr">support@pokebook.fr</a></p>
+
+        <footer>
+            <p>&copy; 2026 PokeBook. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>
