@@ -31,7 +31,7 @@
 </main>
 <script>
   const code = new URLSearchParams(location.search).get('code');
-  if (code && /^[a-f0-9]{12}$/i.test(code)) {
+  if (code && /^(?:[a-hj-np-z2-9]{6}|[a-f0-9]{12})$/i.test(code)) {
     document.getElementById('code').textContent = code.toUpperCase();
     document.getElementById('code-label').hidden = false;
   }
