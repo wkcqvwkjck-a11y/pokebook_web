@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invitation PokeBook</title>
+  <meta name="description" content="Rejoins PokeBook : 50 scans offerts pour toi et ton ami après ton premier scan.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Invitation PokeBook">
+  <meta property="og:description" content="50 scans offerts pour toi et ton ami après ton premier scan.">
+  <meta property="og:image" content="https://pokebook.fr/invite/pokebook-icon.png">
+  <meta property="og:image:alt" content="Icône PokeBook">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://pokebook.fr/invite/pokebook-icon.png">
+  <link rel="icon" href="/invite/pokebook-icon.png" type="image/png">
+  <style>
+    body { margin: 0; padding: 2rem 1rem; background: #f6f7fb; color: #151923; font: 16px -apple-system, BlinkMacSystemFont, sans-serif; text-align: center; }
+    main { max-width: 32rem; margin: 8vh auto; padding: 2rem; border-radius: 1.5rem; background: white; }
+    img { width: 6rem; height: 6rem; border-radius: 1.4rem; }
+    p { line-height: 1.5; } code { display: block; margin: 1.5rem 0; font-size: 1.3rem; font-weight: 700; overflow-wrap: anywhere; }
+    a { display: inline-block; padding: .9rem 1.4rem; border-radius: 999px; background: #007aff; color: white; text-decoration: none; font-weight: 600; }
+    @media (prefers-color-scheme: dark) { body { background: #101118; color: #f5f5f7; } main { background: #22232c; } }
+  </style>
+</head>
+<body><main>
+  <img src="/invite/pokebook-icon.png" alt="Icône PokeBook">
+  <h1>Rejoins PokeBook</h1>
+  <p>Après ton premier scan, ton ami et toi recevez chacun 50 scans offerts.</p>
+  <p id="code-label" hidden>Ton code de parrainage : <code id="code"></code>Garde-le pour le saisir dans l’app après installation.</p>
+  <a href="https://apps.apple.com/app/id6753808143">Télécharger PokeBook</a>
+</main>
+<script>
+  const code = new URLSearchParams(location.search).get('code');
+  if (code && /^[a-f0-9]{12}$/i.test(code)) {
+    document.getElementById('code').textContent = code.toUpperCase();
+    document.getElementById('code-label').hidden = false;
+  }
+</script></body></html>
