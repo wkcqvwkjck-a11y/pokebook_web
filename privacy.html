@@ -82,7 +82,7 @@
         <a class="back-link" href="index.html">&larr; Retour à l'accueil</a>
 
         <h1>Politique de Confidentialité</h1>
-        <div class="date">Dernière mise à jour : 20 octobre 2026</div>
+        <div class="date">Dernière mise à jour : 30 octobre 2026</div>
 
         <p>La présente politique de confidentialité décrit comment l'application <strong>PokeBook</strong> (« l'Application ») collecte, utilise et protège vos informations lorsque vous utilisez notre service sur iOS.</p>
 
@@ -94,11 +94,14 @@
         <h2>2. Données collectées et autorisations requises</h2>
         <p>L'Application demande certaines autorisations iOS uniquement pour fournir ses fonctionnalités essentielles :</p>
         <ul>
-            <li><strong>Appareil photo (Caméra) :</strong> Utilisé en temps réel pour scanner et reconnaître vos cartes à collectionner Pokémon. Le flux vidéo est traité directement sur votre appareil. PokeBook n'enregistre aucune vidéo ni visage.</li>
+            <li><strong>Appareil photo (Caméra) :</strong> Utilisé pour scanner et reconnaître vos cartes à collectionner Pokémon. La prévisualisation et la détection du cadre s’effectuent sur votre appareil. Selon le moteur de reconnaissance utilisé, une image sélectionnée de la carte ou de la page peut être transmise de manière chiffrée au service de reconnaissance pour un traitement ponctuel sans conservation. PokeBook n’enregistre aucune vidéo ni visage.</li>
             <li><strong>Photothèque (Galerie de photos) :</strong> Si vous choisissez d'importer une photo de carte depuis votre galerie, celle-ci est analysée ponctuellement afin d'en identifier la carte. Aucune autre photo de votre photothèque n'est consultée ou transférée.</li>
             <li><strong>Capteurs de mouvement (Accéléromètre / Gyroscope) :</strong> Utilisés exclusivement en local pour simuler les effets holographiques et de brillance sur les cartes en fonction de l'inclinaison de votre iPhone. Ces données de mouvement sont éphémères et ne sont jamais stockées ni transmises.</li>
             <li><strong>Données de collection :</strong> Les cartes que vous ajoutez, vos classeurs virtuels et vos listes de souhaits sont stockés localement sur votre appareil (avec synchronisation sécurisée éventuelle via iCloud ou votre stockage personnel).</li>
-            <li><strong>Données d'achats et d'abonnement :</strong> Toutes les transactions financières sont traitées de manière exclusive et sécurisée par Apple via StoreKit / l'App Store. PokeBook n'a jamais accès à vos coordonnées bancaires, numéros de carte de paiement ou identifiants Apple.</li>
+            <li><strong>Connexion Apple et parrainage :</strong> Si vous utilisez le parrainage, notre service conserve un identifiant de compte, un code d’invitation, les liens de parrainage et les mouvements de crédits. La connexion Apple permet de vérifier le compte grâce à un jeton d’identité et à l’identifiant fourni pour PokeBook ; l’application ne demande ni votre nom ni votre e-mail. Des identifiants de scans et l’utilisation des crédits sont enregistrés pour appliquer les règles de parrainage et prévenir les doublons. Les images et le contenu des cartes ne sont pas enregistrés par ce service.</li>
+            <li><strong>Données d'achats et d'abonnement :</strong> Toutes les transactions financières sont traitées de manière exclusive et sécurisée par Apple via StoreKit / l'App Store. PokeBook n’a jamais accès à vos coordonnées bancaires, numéros de carte de paiement ou mot de passe du compte Apple.</li>
+            <li><strong>Gestion Premium :</strong> RevenueCat traite les informations de transaction et d’abonnement nécessaires à la validation des achats, à la restauration et à l’activation des fonctionnalités Premium. Ces informations sont associées à un identifiant aléatoire généré par son SDK, sans prénom ni e-mail transmis par PokeBook. Elles permettent également de consulter les statistiques d’abonnement.</li>
+            <li><strong>Mesure d’usage :</strong> PokeBook utilise Mixpanel pour mesurer les étapes et sous-étapes de l’onboarding consultées ainsi que les tentatives, réussites, échecs et annulations de scan. Ces événements sont associés à un identifiant aléatoire pseudonyme, à la langue de l’interface, à la version de l’application et à des métadonnées techniques du terminal. Aucun prénom, e-mail, réponse au questionnaire, texte reconnu ou photo n’est transmis à Mixpanel. Aucun enregistrement de session n’est activé et la géolocalisation à partir de l’adresse IP est désactivée.</li>
         </ul>
 
         <h2>3. Utilisation des données</h2>
@@ -108,18 +111,25 @@
             <li>Afficher les informations détaillées de la carte (extensions, rareté, numérotation).</li>
             <li>Interroger les cotes de marché indicatives (Cardmarket, TCGdex) pour estimer la valeur de votre collection.</li>
             <li>Gérer l'accès aux fonctionnalités de l'Application (formule gratuite ou abonnement).</li>
+            <li>Vérifier les comptes participant au parrainage, attribuer les crédits et prévenir les abus.</li>
+            <li>Comprendre les abandons dans l’onboarding et améliorer la fiabilité du scan à partir de statistiques d’usage pseudonymes.</li>
         </ul>
 
         <h2>4. Partage et transfert de données avec des tiers</h2>
         <p><strong>Nous ne vendons, ne louons et ne transmettons aucune donnée personnelle à des courtiers de données ou à des régies publicitaires tierces.</strong></p>
-        <p>Pour assurer le fonctionnement technique du service, certaines données strictement anonymisées peuvent transiter par des prestataires techniques :</p>
+        <p>Pour assurer le fonctionnement technique du service et mesurer son usage, certaines données peuvent être traitées par les prestataires suivants :</p>
         <ul>
             <li><strong>Apple Inc. :</strong> Pour le traitement sécurisé des paiements et la validation des abonnements In-App via l'App Store.</li>
+            <li><strong>RevenueCat :</strong> Pour vérifier les droits Premium et gérer les abonnements à partir des transactions App Store, avec des informations techniques et un identifiant pseudonyme. RevenueCat ne traite pas vos coordonnées bancaires.</li>
             <li><strong>Fournisseurs d'infrastructure d'hébergement :</strong> Pour acheminer les requêtes de consultation de cotes et d'identification de cartes de manière chiffrée (HTTPS / TLS).</li>
+            <li><strong>Cloudflare :</strong> Pour héberger le relais de reconnaissance et le service de parrainage, notamment les identifiants de compte et les données nécessaires à la gestion des invitations et crédits.</li>
+            <li><strong>Mixpanel :</strong> Pour la mesure d’usage décrite ci-dessus, avec un projet hébergé dans l’Union européenne et un envoi chiffré. Les événements ne servent pas au ciblage publicitaire.</li>
         </ul>
 
         <h2>5. Durée de conservation des données</h2>
         <p>Vos données de collection et classeurs sont conservés localement sur votre iPhone tant que vous conservez l'Application. La désinstallation de l'Application entraîne la suppression des données stockées localement.</p>
+        <p>Les données d’abonnement et de parrainage conservées sur les services distants ne sont pas automatiquement effacées par une désinstallation ou une réinitialisation locale. Vous pouvez demander leur suppression à l’adresse de contact, sous réserve des obligations de conservation applicables aux achats et à la prévention de la fraude.</p>
+        <p>Les événements de mesure d’usage déjà transmis sont conservés dans le projet Mixpanel selon ses paramètres de conservation. La suppression locale des données réinitialise l’identifiant de mesure pour l’activité future ; elle ne supprime pas automatiquement les événements déjà reçus. Pour demander leur effacement, contactez-nous à l’adresse ci-dessous.</p>
 
         <h2>6. Vos droits (RGPD et lois sur la protection des données)</h2>
         <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et aux réglementations applicables, vous disposez des droits suivants :</p>
