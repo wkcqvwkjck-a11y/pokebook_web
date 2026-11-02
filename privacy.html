@@ -82,11 +82,11 @@
         <a class="back-link" href="index.html">&larr; Retour à l'accueil</a>
 
         <h1>Politique de Confidentialité</h1>
-        <div class="date">Dernière mise à jour : 1 novembre 2026</div>
+        <div class="date">Dernière mise à jour : 2 novembre 2026</div>
 
         <p>La présente politique de confidentialité décrit comment l'application <strong>PokeBook</strong> (« l'Application ») collecte, utilise et protège vos informations lorsque vous utilisez notre service sur iOS.</p>
 
-        <p>Nous attachons une importance primordiale au respect de votre vie privée. PokeBook est conçue selon le principe de minimisation des données (Privacy by Design) : nous ne collectons que ce qui est strictement nécessaire au fonctionnement de l'Application.</p>
+        <p>Nous attachons une importance primordiale au respect de votre vie privée. PokeBook est conçue selon le principe de minimisation des données (Privacy by Design) : nous limitons les données transmises et expliquons ci-dessous les traitements nécessaires aux fonctionnalités, à la mesure d’usage et, avec votre accord pour la reconnaissance IA, les usages du fournisseur de modèles.</p>
 
         <h2>1. Responsable du traitement</h2>
         <p>Le responsable du traitement des données est l'éditeur de l'application PokeBook. Pour toute question ou demande concernant vos données personnelles, vous pouvez nous contacter directement par email à : <a href="mailto:support@pokebook.fr">support@pokebook.fr</a>.</p>
@@ -94,8 +94,8 @@
         <h2>2. Données collectées et autorisations requises</h2>
         <p>L'Application demande certaines autorisations iOS uniquement pour fournir ses fonctionnalités essentielles :</p>
         <ul>
-            <li><strong>Appareil photo (Caméra) :</strong> Utilisé pour scanner et reconnaître vos cartes à collectionner Pokémon. La prévisualisation et la détection du cadre s’effectuent sur votre appareil. Selon le moteur de reconnaissance utilisé, une image sélectionnée de la carte ou de la page peut être transmise de manière chiffrée au service de reconnaissance pour un traitement ponctuel sans conservation. PokeBook n’enregistre aucune vidéo ni visage.</li>
-            <li><strong>Photothèque (Galerie de photos) :</strong> Si vous choisissez d'importer une photo de carte depuis votre galerie, celle-ci est analysée ponctuellement afin d'en identifier la carte. Aucune autre photo de votre photothèque n'est consultée ou transférée.</li>
+            <li><strong>Appareil photo (Caméra) :</strong> Utilisé pour scanner et reconnaître vos cartes à collectionner Pokémon. La prévisualisation et la détection du cadre s’effectuent sur votre appareil. Après votre accord dans l’application, la photo de la carte ou de la page est transmise en HTTPS à notre relais Cloudflare, puis à OpenCode Go pour être traitée par MuseSpark 1.3 Contributor de Meta. Les requêtes, qui comprennent la photo et les instructions de reconnaissance, ainsi que les réponses peuvent être conservées par les prestataires et utilisées pour entraîner les modèles de Meta. Il ne s’agit pas d’un traitement garanti sans conservation. Ne photographiez pas de visages, de documents ou d’autres informations personnelles. En cas de refus, aucun envoi IA n’est autorisé ; la recherche manuelle et la reconnaissance locale disponible restent accessibles. L’application ne transmet pas de vidéo.</li>
+            <li><strong>Photothèque (Galerie de photos) :</strong> Si vous choisissez d'importer une photo de carte depuis votre galerie, celle-ci suit le même parcours de reconnaissance et le même consentement IA que les photos prises avec la caméra. Aucune autre photo de votre photothèque n'est consultée ou transférée.</li>
             <li><strong>Capteurs de mouvement (Accéléromètre / Gyroscope) :</strong> Utilisés exclusivement en local pour simuler les effets holographiques et de brillance sur les cartes en fonction de l'inclinaison de votre iPhone. Ces données de mouvement sont éphémères et ne sont jamais stockées ni transmises.</li>
             <li><strong>Données de collection :</strong> Les cartes que vous ajoutez, vos classeurs virtuels et vos listes de souhaits sont stockés localement sur votre appareil (avec synchronisation sécurisée éventuelle via iCloud ou votre stockage personnel).</li>
             <li><strong>Connexion Apple et parrainage :</strong> Notre service conserve l’identifiant fourni par Apple pour PokeBook et un jeton de renouvellement chiffré, utilisé pour révoquer la connexion lors de la suppression du compte. Il conserve aussi un code d’invitation, les liens de parrainage et les mouvements de crédits. L’application ne demande ni votre nom ni votre e-mail. Des identifiants de scans et l’utilisation des crédits sont enregistrés pour appliquer les règles de parrainage et prévenir les doublons. Les images et le contenu des cartes ne sont pas enregistrés par ce service.</li>
@@ -105,9 +105,9 @@
         </ul>
 
         <h2>3. Utilisation des données</h2>
-        <p>Les données collectées sont utilisées exclusivement pour :</p>
+        <p>Les données traitées par PokeBook et ses prestataires servent aux finalités suivantes :</p>
         <ul>
-            <li>Identifier les cartes scannées via nos modèles de reconnaissance visuelle.</li>
+            <li>Identifier les cartes scannées via les fonctions locales et, avec votre accord, via MuseSpark 1.3 Contributor. L’offre Contributor autorise également l’utilisation des requêtes et réponses pour l’entraînement de modèles de Meta ; cette finalité dépasse la seule identification de votre carte.</li>
             <li>Afficher les informations détaillées de la carte (extensions, rareté, numérotation).</li>
             <li>Interroger les cotes de marché indicatives (Cardmarket, TCGdex) pour estimer la valeur de votre collection.</li>
             <li>Gérer l'accès aux fonctionnalités de l'Application (formule gratuite ou abonnement).</li>
@@ -123,10 +123,12 @@
             <li><strong>RevenueCat :</strong> Pour vérifier les droits Premium et gérer les abonnements à partir des transactions App Store, avec des informations techniques et un identifiant pseudonyme. RevenueCat ne traite pas vos coordonnées bancaires.</li>
             <li><strong>Fournisseurs d'infrastructure d'hébergement :</strong> Pour acheminer les requêtes de consultation de cotes et d'identification de cartes de manière chiffrée (HTTPS / TLS).</li>
             <li><strong>Cloudflare :</strong> Pour héberger le relais de reconnaissance et le service de parrainage, notamment les identifiants de compte et les données nécessaires à la gestion des invitations et crédits.</li>
+            <li><strong>OpenCode Go et Meta (MuseSpark 1.3 Contributor) :</strong> Pour la reconnaissance des cartes à partir des photos et pour les usages de conservation et d’entraînement indiqués ci-dessus. Consultez la <a href="https://opencode.ai/v2/docs/console/go/#privacy">documentation de confidentialité OpenCode Go</a> et les <a href="https://dev.meta.ai/legal/geographic-use-policy">conditions géographiques de Meta</a>. L’acheminement et la disponibilité du traitement dépendent des prestataires et des régions qu’ils prennent en charge ; nous ne garantissons pas un traitement limité à l’Union européenne.</li>
             <li><strong>Mixpanel :</strong> Pour la mesure d’usage décrite ci-dessus, avec un projet hébergé dans l’Union européenne et un envoi chiffré. Les événements ne servent pas au ciblage publicitaire.</li>
         </ul>
 
         <h2>5. Durée de conservation des données</h2>
+        <p><strong>Reconnaissance IA :</strong> PokeBook ne promet ni une absence de conservation ni un effacement immédiat des photos, requêtes et réponses chez OpenCode ou Meta. L’offre MuseSpark 1.3 Contributor n’est pas une offre à rétention nulle et permet l’entraînement. La documentation publique citée ne précise pas de durée unique de conservation pour cette offre ; nous ne pouvons donc pas annoncer un délai garanti. Contactez-nous avant tout envoi si vous avez besoin de précisions. Le retrait de votre accord bloque les futurs envois autorisés par l’app mais n’annule pas les traitements déjà effectués et ne supprime pas automatiquement les données déjà transmises aux prestataires.</p>
         <p>Vos données de collection et classeurs sont conservés localement sur votre iPhone tant que vous conservez l'Application. La désinstallation de l'Application entraîne la suppression des données stockées localement.</p>
         <p>Les données d’abonnement et de parrainage conservées sur les services distants ne sont pas automatiquement effacées par une désinstallation ou une réinitialisation locale. Vous pouvez demander leur suppression à l’adresse de contact, sous réserve des obligations de conservation applicables aux achats et à la prévention de la fraude.</p>
         <p>Les événements de mesure d’usage déjà transmis sont conservés dans le projet Mixpanel selon ses paramètres de conservation. La suppression locale des données réinitialise l’identifiant de mesure pour l’activité future ; elle ne supprime pas automatiquement les événements déjà reçus. Pour demander leur effacement, contactez-nous à l’adresse ci-dessous.</p>
@@ -137,7 +139,7 @@
             <li><strong>Droit d'accès et d'information :</strong> Vous avez le droit d'obtenir confirmation du traitement de vos données.</li>
             <li><strong>Droit de rectification :</strong> Vous pouvez modifier vos informations directement dans l'Application.</li>
             <li><strong>Droit à l'effacement :</strong> Vous pouvez supprimer toutes vos données locales en réinitialisant l'Application ou en la supprimant de votre appareil. Vous pouvez supprimer votre compte de parrainage et ses données dans la rubrique Parrainage de l’application après connexion avec Apple. Pour toute autre donnée associée à un compte ou au support, vous pouvez nous écrire à <a href="mailto:support@pokebook.fr">support@pokebook.fr</a> pour en demander la suppression immédiate.</li>
-            <li><strong>Droit de révoquer vos consentements :</strong> Vous pouvez activer ou désactiver les accès à la caméra et aux photos à tout moment depuis les <em>Réglages iOS &gt; PokeBook</em>.</li>
+            <li><strong>Droit de révoquer vos consentements :</strong> Pour la version de l’application présentant MuseSpark 1.3 Contributor dans son consentement, vous pouvez retirer votre accord IA depuis <em>Réglages PokéBook &gt; Aide &amp; confidentialité &gt; Retirer l’accord IA</em>. Le prochain envoi distant nécessitera un nouvel accord. Cet accord concerne la reconnaissance IA et ses usages de conservation et d’entraînement décrits ici ; il ne concerne pas la mesure d’usage Mixpanel. Vous pouvez aussi activer ou désactiver les accès à la caméra et aux photos depuis les <em>Réglages iOS &gt; PokéBook</em>.</li>
         </ul>
 
         <h2>7. Protection des mineurs</h2>
